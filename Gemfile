@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem "haml-rails", "~> 0.4"
 gem 'bootstrap-sass', '2.0.4'
+gem 'bcrypt-ruby'
+gem 'bootstrap_form'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -21,6 +23,13 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :development do
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
 
 group :test do
   gem "capybara", "~> 2.1.0"

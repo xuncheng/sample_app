@@ -1,4 +1,4 @@
-!!!
+!!! 5
 %html
   %head
     %title= full_title(yield(:title))
@@ -9,5 +9,6 @@
   %body
     = render 'layouts/header'
     %div{ class: 'container' }
+      = render 'layouts/messages'
       = yield
       = render 'layouts/footer'
