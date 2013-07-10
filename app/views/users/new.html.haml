@@ -11,4 +11,4 @@
       = f.password_field :password, class: "span5"
       = f.password_field :password_confirmation, label: "Confirm Password", class: "span5"
       = f.actions do
-        = f.submit "Create User", class: "btn btn-large btn-primary"
+        = f.submit "Create User", disable_with: "Saving...", class: "btn btn-large btn-primary"

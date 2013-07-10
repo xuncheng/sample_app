@@ -8,6 +8,6 @@ SampleApp::Application.routes.draw do
   get '/signup', to: 'users#new'
   get '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
-  resources :users, only: [:show, :create]
+  resources :users, except: [:new]
   resources :sessions, only: [:create]
 end
