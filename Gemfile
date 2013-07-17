@@ -5,9 +5,10 @@ gem "haml-rails", "~> 0.4"
 gem 'bootstrap-sass', '2.0.4'
 gem 'bcrypt-ruby'
 gem 'bootstrap_form'
-gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'fabrication'
+gem 'faker'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -36,6 +37,7 @@ end
 
 group :test do
   gem "capybara", "~> 2.1.0"
+  gem 'shoulda-matchers', '~> 2.2.0'
 end
 
 group :production do

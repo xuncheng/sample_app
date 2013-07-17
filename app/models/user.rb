@@ -5,8 +5,14 @@ class User < ActiveRecord::Base
 
   has_secure_password
 
-  before_save { email.downcase }
+  has_many :microposts, dependent: :destroy
+
+  before_save { email.downcase! }
   before_save :create_remember_token
+
+  def feed
+    microposts
+  end
 
   private
   def create_remember_token
